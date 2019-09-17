@@ -1,0 +1,146 @@
+# my global config
+global:
+  scrape_interval:     15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  evaluation_interval: 15s # Evaluate rules every 15 seconds. The default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# Alertmanager configuration
+alerting:
+  alertmanagers:
+  - static_configs:
+    - targets:
+      # - alertmanager:9093
+
+# Load rules once and periodically evaluate them according to the global 'evaluation_interval'.
+rule_files:
+  # - "first_rules.yml"
+  # - "second_rules.yml"
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'prometheus-self'
+    scrape_interval: 5s
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+    static_configs:
+    - targets: ['localhost:9090']
+  - job_name: 'pi-2'
+    scrape_interval: 5s
+    # metrics_path defaults to '/metrics'
+    # scheme defaults to 'http'.
+    static_configs:
+    - targets: ['192.168.100.2:8888']
+  - job_name: 'pi-3'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.3:8888']
+  - job_name: 'pi-4'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.4:8888']
+  - job_name: 'pi-5'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.5:8888']
+  - job_name: 'pi-6'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.6:8888']
+  - job_name: 'pi-7'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.7:8888']
+  - job_name: 'pi-8'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.8:8888']
+  - job_name: 'pi-9'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.9:8888']
+  - job_name: 'pi-10'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.10:8888']
+  - job_name: 'pi-11'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.11:8888']
+  - job_name: 'pi-12'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.12:8888']
+  - job_name: 'pi-13'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.13:8888']
+  - job_name: 'pi-14'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.14:8888']
+  - job_name: 'pi-15'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.15:8888']
+  - job_name: 'pi-16'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.16:8888']
+  - job_name: 'pi-17'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.17:8888']
+  - job_name: 'pi-18'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.18:8888']
+  - job_name: 'pi-19'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.19:8888']
+  - job_name: 'pi-20'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.20:8888']
+  - job_name: 'pi-21'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.21:8888']
+  - job_name: 'pi-22'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.22:8888']
+  - job_name: 'pi-23'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.23:8888']
+  - job_name: 'pi-24'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.24:8888']
+  - job_name: 'pi-25'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.25:8888']
+  - job_name: 'pi-26'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.26:8888']
+  - job_name: 'pi-27'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.27:8888']
+  - job_name: 'pi-28'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.28:8888']
+  - job_name: 'pi-29'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.29:8888']
+  - job_name: 'pi-30'
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['192.168.100.30:8888']

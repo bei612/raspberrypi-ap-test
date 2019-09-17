@@ -1,0 +1,16 @@
+[Unit]
+Description=prometheus
+After=network.target
+
+[Service]
+Type=simple
+Group=root
+User=root
+ExecStart=/home/pi/prometheusExporter
+ExecStop=/bin/kill $MAINPID
+WorkingDirectory=/home/pi
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

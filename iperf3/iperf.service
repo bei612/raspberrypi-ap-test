@@ -1,0 +1,11 @@
+[Unit]
+Description=iperf3 server
+After=network.target
+
+[Service]
+ExecStart=/usr/local/iperf/bin/iperf3 -s -p 54321 --logfile /var/log/iperf.log
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
